@@ -1,0 +1,74 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+::selection {
+  background: #33dd60;
+}
+
+button:focus {
+  border: 1px solid red;
+}
+
+.details-section {
+  position: relative;
+  height: 100%;
+  box-shadow: 2px 5px 6px 2px #726e6e;
+  padding: 20px;
+}
+
+.details-section header {
+  position: absolute;
+  left: 10px;
+  top: -19px;
+  background: white;
+  box-shadow: 3px 3px 4px 2px grey;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+div.personal-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.personal-details span.separator {
+  height: 10px;
+  width: 30px;
+  background: #ffce29;
+  border-radius: 20px;
+  margin: 10px 0px 10px 0px;
+}
+
+.personal-details span.separator + h5 {
+  margin-bottom: 20px;
+}
+
+.personal-details p {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+div.personal-details i {
+  margin: 10px 10px 10px 10px;
+  color: #f5bd00;
+}
+
+div.personal-details span {
+  color: #000;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+app-employment {
+  display: block;
+}
+
+.text-wrap{
+  text-wrap:wrap
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="./css/resume.css">
+    <link rel="stylesheet" href="./css/all.css">
+  </head>
+
+  <body>
+    <div id="container">
+      
+      <nav>
+        <figure>
+          <img src="./jks.jpg" width="150px" height="150px" />
+          <figcaption>Jayant Kumar Soni</figcaption>
+      </figure>
+      <button data-j-componentName="about"><span>About</span></span>
+        <button data-j-componentName="project"><span>Projects</span></button>
+        <button data-j-componentName="employment"><span>Employment</span></button>
+      </nav>
+
+      <section id="componentLoader">
+
+
+      </section>
+    </div>
+<!-- About -->
+    <template id='about'>
+    
+    <link rel="stylesheet" href="./css/components.css">
+        <div class="details-section">
+          <header>
+            <slot name="title"></slot>
+          </header>
+        
+          
+          <div class="personal-details">
+          <h1>{{name}}</h1>
+          <span class="email"><a href="mailto:{{email}}"><i class="fas fa-envelope-square"></i>{{email}}</span></a>
+          <span><i class="fas fa-phone"></i>{{contact}}</span>
+          <a href="https://resume-j-docs.s3.ap-southeast-2.amazonaws.com/Jayant_Kumar_Soni_Australia_Resume.pdf" target="_blank"><span><i class="fas fa-file-download"></i>Resume</span></a>
+
+          <p>Web Developer</p>
+
+          <span class="separator"></span>
+           <h5> About me</h5>
+           
+           <div> <pre class="text-wrap">{{aboutMe}}</pre></div>
+          
+          </div>
+
+        </div>
+        
+    </template>
+
+<!-- Employment -->
+    <template id='employment'>
+      <link rel="stylesheet" href="./css/components.css">
+      <div class="details-section">
+        <header>
+          <slot name="title"></slot>
+        </header>
+
+        </div>
+    </template>
+
+
+    <!-- Project -->
+    <template id='project'>
+      <link rel="stylesheet" href="./css/components.css">
+        <div class="details-section">
+          <header>
+            <slot name="title"></slot>
+          </header>
+         </div>
+    </template>
+   
+  </body>
+</html>

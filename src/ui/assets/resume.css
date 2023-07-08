@@ -1,0 +1,104 @@
+/**
+Reset CSS
+*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  padding: 0;
+  margin: 0;
+  /* background: #1787cd; */
+}
+/********************************************************/
+
+figure {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+figure figcaption {
+  position: absolute;
+  bottom: 0;
+  background: #373737;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+nav button {
+  appearance: none;
+  padding: 10px;
+  border: 1px solid #fff;
+  width: 150px;
+  position: relative;
+  background: #fff;
+  outline: none;
+  color: #000;
+  font-size: 1.3rem;
+  height: 150px;
+  cursor: pointer;
+  border: 1px solid #00000026;
+}
+
+nav button.selected:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+}
+
+nav button.selected:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 55px;
+  width: 0;
+  height: 0;
+  border-left: 20px solid #ffce29;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+nav button.selected {
+  z-index: 1;
+  background: #ffce29;
+}
+
+#container {
+  display: flex;
+  margin: 30px;
+  box-shadow: 2px 5px 6px 2px #726e6e;
+}
+
+#componentLoader {
+  width: 100%;
+}
+
+div.img-jks {
+  width: 150px;
+  height: 150px;
+  background-image: url(./jks.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Regular.ttf");
+  src: /* Modern Browsers */ url("./fonts/Roboto-Regular.ttf")
+    format("truetype");
+}
